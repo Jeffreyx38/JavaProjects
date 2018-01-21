@@ -1,0 +1,76 @@
+Everything compiles perfectly. 
+
+Let me know if it fails.
+
+
+input.infix:
+
+67 + 12 - 45
+34 - 17 + 3
+4 * ( 5 - 3 )
+7 / 6 % 2
+
+
+Targets:
+	1. builds all files
+	2. executes main.java file
+	3. builds javadocs in docs dir
+
+Ant commands:
+ant -f input.xml
+ant run
+
+
+main.java
+
+    /**
+     * This method converts an array of strings to a list of infix tokens
+     * @param line
+     * @return a list of infix tokens
+     *
+     */
+    public static List<Token> infix(String line)
+
+    /**
+     *  this method converts a list of infix tokens to a list list of postfix tokens
+     * @param infix
+     * @return list of postfix tokens
+     */
+    public static List<Token> infix2postfix(List<Token> infix)
+
+    /**
+     * This methods calculates the given token
+     * @param tk - token
+     * @param y
+     * @param x
+     * @return y (operator) x
+     */
+    public static Integer calculator(String tk, int y, int x)
+
+    /**
+     *
+     * @param postfix
+     * @return
+     */
+    public static Integer evalPostfix(List<Token> postfix)
+
+    /**
+     * converts postfixs to strings
+     * @param token
+     * @return string of tokens
+     */
+
+    public static String postfix2String(List<Token> token)
+
+
+    /**
+     * In the main file we read from file and store in a list
+     * We iterate through this list and covert to infix list of tokens
+     * Then use infix list of tokens to covert to postfix list of tokens
+     * Finally, use this list of tokens to evaluate
+     * @param args
+     */
+
+    public static void main(String args[])
+
+ 

@@ -1,0 +1,25 @@
+<project>
+  <path id="main.class.path">
+	<pathelement path='${CLASSPATH}'/>
+	<pathelement location='.'/>
+  </path>
+  <target name="clean">
+        <delete dir="build"/>
+  </target>
+  <target name="compile">
+        <javac includeantruntime="false" srcdir="." destdir="build/classes"/>
+  </target>
+  <target name="run">
+    <javac includeantruntime="false" srcdir='./' includes='main.java'/>
+	<java classname='main'>
+	<classpath refid="main.class.path"/>
+    </java>
+  </target>
+  <target name="doc" description="generate documentation">
+    <javadoc sourcefiles="main.java" destdir="./docs"/>
+    <javadoc sourcefiles="opType.java" destdir="./docs"/>
+    <javadoc sourcefiles="Token.java" destdir="./docs"/>
+    <javadoc sourcefiles="Operand.java" destdir="./docs"/>
+    <javadoc sourcefiles="Operator.java" destdir="./docs"/>	
+  </target>
+ </project>

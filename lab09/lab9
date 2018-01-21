@@ -1,0 +1,39 @@
+Q1.
+When I ran bug3 the program output “Segmentation fault (core dumped)”. A core file was also created in the execution of bug3. 
+
+Q2.
+
+It fails when it calls the inTable function. 
+
+Q3.
+
+a. bug1.c
+
+Format problem. Does not compile. Fixed by passing n by reference not by value. 
+
+b. bug2.c
+
+Format problem. Does not compile. Fixed by changing Pi format specifier to “f” and n to “d”. 
+
+c. bug3.c
+
+The problem was a segmentation fault (core dumped). This was fixed by moving the incrementation of the number of lines “++numLines” after the st [numLines] = strip (buff); statement. 
+
+d. avg.c 
+
+Format problem. Does not compile. Fixed by passing n by reference. 
+
+e. 
+
+quicksortBug is missing the pivot statement generator. The program is unable to pick an element as pivot and partition around it; hence, the error. We could assert by verifying if we have a pivot as pre-condition. 
+
+Q4.
+
+When compiling there are three kind of errors: syntax, runtime, and logic errors. The compiler couldn’t catch this error because it was a logic error. The compiler does not know what the program is supposed to do, hence it will compile without any signs of error. 
+
+Q5.
+
+It really depends how qsort is implemented, specifically the compare function. In this case the program throw an error because the given comparison function type is String while we are trying to sort Integers. When implementing the comparator function for qsort it’s best to provide much flexibility so that qsort can be used for any type. 
+
+
+

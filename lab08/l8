@@ -1,0 +1,30 @@
+Q1.
+1. Hide implementation details 
+This principle provides enough functionality so clients do not need to know what’s going on behind each library. Modular pieces are easier to test, debug, it’s easier to replace and modular pieces improve portability. 
+2. Choose a small orthogonal set of primitives
+This principle describes that interfaces should provide as much functionality as necessary but not more functions should not overlap excessively in their capabilities. Narrow interfaces are preferred to wide ones
+3. Don’t reach behind user’s back
+This principle specifies that a library should not write secret files and variable or change global data, and it should be circumspect about modifying data in its caller 
+4. Do the same thing the same way everywhere 
+This principle implies that the same thing should the same way everywhere such as using consistent name schemes, defining arguments consistently and behave similarly to associated interfaces
+
+Q2.
+Some problems include that it doesn’t handle lines more than 199 characters, records have at most 20 fields, commas within quotes and escaped quotes are not properly handled and as well empty fields.
+
+Q3.
+
+Records separated by newline, fields separated by commas were improved upon in the first revision in C. 
+
+Q4.
+
+The first revision still have the empty fields problem and it is not possible to parse 2 different csv files because the files need to be redirected through stdin. 
+
+Q5.
+
+No the C++ implementation does not solve these problems. The empty fields problem still remains.
+
+Q6.
+
+Yes. 
+
+
